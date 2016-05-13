@@ -1,30 +1,31 @@
+::author zhaxiancheng
 @echo off
 
-::echo µ±Ç°ÅÌ·û£º%~d0
-::echo µ±Ç°ÅÌ·ûºÍÂ·¾¶£º%~dp0
-::echo µ±Ç°ÅÌ·ûºÍÂ·¾¶µÄ¶ÌÎÄ¼şÃû¸ñÊ½£º%~sdp0
-::echo µ±Ç°Åú´¦ÀíÈ«Â·¾¶£º%~f0
-::echo µ±Ç°CMDÄ¬ÈÏÄ¿Â¼£º%cd%
-::Ìø×ªµ½µ±Ç°Â·¾¶£¬Ìí¼ÓÇ¿ÖÆÌø×ª²ÎÊı/d£¬¿ÉÈÎÒâÌø×ª
+::echo å½“å‰ç›˜ç¬¦ï¼š%~d0
+::echo å½“å‰ç›˜ç¬¦å’Œè·¯å¾„ï¼š%~dp0
+::echo å½“å‰ç›˜ç¬¦å’Œè·¯å¾„çš„çŸ­æ–‡ä»¶åæ ¼å¼ï¼š%~sdp0
+::echo å½“å‰æ‰¹å¤„ç†å…¨è·¯å¾„ï¼š%~f0
+::echo å½“å‰CMDé»˜è®¤ç›®å½•ï¼š%cd%
+::è·³è½¬åˆ°å½“å‰è·¯å¾„ï¼Œæ·»åŠ å¼ºåˆ¶è·³è½¬å‚æ•°/dï¼Œå¯ä»»æ„è·³è½¬
 ::cd /d %cd%
 
-@echo ÇëÈ·±£µ±Ç°»úÆ÷ÒÑ¾­ÅäÖÃmaven»·¾³±äÁ¿£¡
-::¼ì²émaven°æ±¾£¬²ÉÓÃcallÖ´ĞĞ£¬±ÜÃâÉÁÍË
+@echo è¯·ç¡®ä¿å½“å‰æœºå™¨å·²ç»é…ç½®mavenç¯å¢ƒå˜é‡ï¼
+::æ£€æŸ¥mavenç‰ˆæœ¬ï¼Œé‡‡ç”¨callæ‰§è¡Œï¼Œé¿å…é—ªé€€
 call mvn -version
 
-::ÉèÖÃÈ«¾Öpackage¡¢appCode¡¢versionÄ¬ÈÏÖµ
+::è®¾ç½®å…¨å±€packageã€appCodeã€versioné»˜è®¤å€¼
 @set "package=org.gy.demo"
 @set "appCode=demo"
 @set "version=1.0.0-SNAPSHOT"
 
-::ÉèÖÃÈ«¾ÖÄ£°åarchetypeGroupId£¬archetypeArtifactId£¬archetypeVersion
-::1¡¢gy-archetype-admin-web£ººóÌ¨web·şÎñÄ£°å
-::2¡¢gy-archetype-business£ºÒµÎñÂß¼­Ä£°å
-::3¡¢gy-archetype-service£ºÖĞÌ¨½Ó¿ÚÄ£°å
-::4¡¢gy-archetype-util£º¹¤¾ßÀàÄ£°å
-::5¡¢gy-archetype-pom£ºÖ÷pomÄ£°å
-::6¡¢gy-archetype-service-web£ºÖĞÌ¨web·şÎñÄ£°å
-::7¡¢gy-archetype-web£ºÇ°Ì¨web·şÎñÄ£°å
+::è®¾ç½®å…¨å±€æ¨¡æ¿archetypeGroupIdï¼ŒarchetypeArtifactIdï¼ŒarchetypeVersion
+::1ã€gy-archetype-admin-webï¼šåå°webæœåŠ¡æ¨¡æ¿
+::2ã€gy-archetype-businessï¼šä¸šåŠ¡é€»è¾‘æ¨¡æ¿
+::3ã€gy-archetype-serviceï¼šä¸­å°æ¥å£æ¨¡æ¿
+::4ã€gy-archetype-utilï¼šå·¥å…·ç±»æ¨¡æ¿
+::5ã€gy-archetype-pomï¼šä¸»pomæ¨¡æ¿
+::6ã€gy-archetype-service-webï¼šä¸­å°webæœåŠ¡æ¨¡æ¿
+::7ã€gy-archetype-webï¼šå‰å°webæœåŠ¡æ¨¡æ¿
 @set "archetypeGroupId=org.gy.archetype"
 @set "archetypeArtifactId-admin-web=gy-archetype-admin-web"
 @set "archetypeArtifactId-business=gy-archetype-business"
@@ -36,24 +37,24 @@ call mvn -version
 @set "archetypeVersion=1.0-SNAPSHOT"
 
 :start
-::echo=Êä³ö¿ÕĞĞ
+::echo=è¾“å‡ºç©ºè¡Œ
 
-@echo *********ÉèÖÃÒıµ¼*************
+@echo *********è®¾ç½®å¼•å¯¼*************
 
-@echo 1£©ÉèÖÃpackage£¬Ê¾Àı£ºorg.gy.demo£¬ÇëÊäÈë£º1
+@echo 1ï¼‰è®¾ç½®packageï¼Œç¤ºä¾‹ï¼šorg.gy.demoï¼Œè¯·è¾“å…¥ï¼š1
 
-@echo 2£©ÉèÖÃappCode£¬Ê¾Àı£ºdemo£¬ÇëÊäÈë£º2
+@echo 2ï¼‰è®¾ç½®appCodeï¼Œç¤ºä¾‹ï¼šdemoï¼Œè¯·è¾“å…¥ï¼š2
 
-@echo 3£©ÉèÖÃversion£¬Ê¾Àı£º1.0.0-SNAPSHOT£¬ÇëÊäÈë£º3
+@echo 3ï¼‰è®¾ç½®versionï¼Œç¤ºä¾‹ï¼š1.0.0-SNAPSHOTï¼Œè¯·è¾“å…¥ï¼š3
 
-@echo 4£©Ö´ĞĞgenerate£¬ÇëÊäÈë£º4
+@echo 4ï¼‰æ‰§è¡Œgenerateï¼Œè¯·è¾“å…¥ï¼š4
 
-@echo 5£©ÍË³ö²Ù×÷£¬ÇëÊäÈë£º5
+@echo 5ï¼‰é€€å‡ºæ“ä½œï¼Œè¯·è¾“å…¥ï¼š5
 
-@echo *********ÉèÖÃÒıµ¼*************
+@echo *********è®¾ç½®å¼•å¯¼*************
 
-::/p»ñÈ¡ÓÃ»§ÊäÈëµÄÖµ
-set /p select=ÇëÊäÈëÄúµÄÑ¡Ôñ£º
+::/pè·å–ç”¨æˆ·è¾“å…¥çš„å€¼
+set /p select=è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š
 if %select%==1 (
 	call:setProperty "package",package
 	goto start
@@ -73,41 +74,41 @@ if %select%==5 (
 	goto exit
 )
 else (
-	@echo ÄúµÄÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë£¡
+	@echo æ‚¨çš„è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼
 	goto start
 )
 
-::ÉèÖÃÊôĞÔ£¬²ÎÊı1£ºÉèÖÃÃèÊö£¬²ÎÊı2£ºÈ«¾Ö±äÁ¿ÒıÓÃ£¬%1±íÊ¾µÚÒ»¸ö²ÎÊı£¬ÒÔ´ËÀàÍÆ
+::è®¾ç½®å±æ€§ï¼Œå‚æ•°1ï¼šè®¾ç½®æè¿°ï¼Œå‚æ•°2ï¼šå…¨å±€å˜é‡å¼•ç”¨ï¼Œ%1è¡¨ç¤ºç¬¬ä¸€ä¸ªå‚æ•°ï¼Œä»¥æ­¤ç±»æ¨
 :setProperty
 
 	SETLOCAL
-	@echo ÉèÖÃ%1¿ªÊ¼... 
+	@echo è®¾ç½®%1å¼€å§‹... 
 	
-	set /p property=ÇëÉèÖÃ%1£¬ÇëÊäÈë£º
+	set /p property=è¯·è®¾ç½®%1ï¼Œè¯·è¾“å…¥ï¼š
 	
 	if "%property%"=="" (
-		@echo ÄúµÄÊäÈë²»ÄÜÎª¿Õ£¬ÇëÖØĞÂÊäÈë£¡
+		@echo æ‚¨çš„è¾“å…¥ä¸èƒ½ä¸ºç©ºï¼Œè¯·é‡æ–°è¾“å…¥ï¼
 		goto start
 	)
 	( ENDLOCAL  
 		set "%2=%property%" 
-		@echo ÄúÉèÖÃµÄ%1ÊôĞÔÖµ£º%property%		
+		@echo æ‚¨è®¾ç½®çš„%1å±æ€§å€¼ï¼š%property%		
 	) 
 
-	@echo ÉèÖÃ%1³É¹¦...
+	@echo è®¾ç½®%1æˆåŠŸ...
 	
 	goto:eof
 
-::generateÌáÊ¾È·ÈÏ	
+::generateæç¤ºç¡®è®¤	
 :generateTip
 	
-	@echo ÄúÉèÖÃµÄpackageÊôĞÔÖµ£º%package%
+	@echo æ‚¨è®¾ç½®çš„packageå±æ€§å€¼ï¼š%package%
 	
-	@echo ÄúÉèÖÃµÄappCodeÊôĞÔÖµ£º%appCode%
+	@echo æ‚¨è®¾ç½®çš„appCodeå±æ€§å€¼ï¼š%appCode%
 	
-	@echo ÄúÉèÖÃµÄversionÊôĞÔÖµ£º%version%
+	@echo æ‚¨è®¾ç½®çš„versionå±æ€§å€¼ï¼š%version%
 	
-	choice  /C BSC /M "generateÅúÁ¿´¦ÀíÇë°´B£¬·Ö²½²Ù×÷Çë°´S£¬È¡ÏûÇë°´C" 
+	choice  /C BSC /M "generateæ‰¹é‡å¤„ç†è¯·æŒ‰Bï¼Œåˆ†æ­¥æ“ä½œè¯·æŒ‰Sï¼Œå–æ¶ˆè¯·æŒ‰C" 
 	
 	if %errorlevel%==1 (
 		goto build
@@ -120,115 +121,115 @@ else (
 	)
 
 
-::generateÖ¸¶¨Ä£¿é£¬²ÎÊı1£ºarchetypeGroupId£¬²ÎÊı2£ºarchetypeArtifactId£¬²ÎÊı3£ºarchetypeVersion£¬²ÎÊı4£ºÄ£¿éÃû³Æ
+::generateæŒ‡å®šæ¨¡å—ï¼Œå‚æ•°1ï¼šarchetypeGroupIdï¼Œå‚æ•°2ï¼šarchetypeArtifactIdï¼Œå‚æ•°3ï¼šarchetypeVersionï¼Œå‚æ•°4ï¼šæ¨¡å—åç§°
 :generateModule
 	SETLOCAL
-	@echo Ö´ĞĞ%4¿ªÊ¼... 
+	@echo æ‰§è¡Œ%4å¼€å§‹... 
 	
-	@echo archetypeGroupId£º%1 
-	@echo archetypeArtifactId£º%2 
-	@echo archetypeVersion£º%3 
-	@echo Ä£¿éÃû³Æ£º%4
+	@echo archetypeGroupIdï¼š%1 
+	@echo archetypeArtifactIdï¼š%2 
+	@echo archetypeVersionï¼š%3 
+	@echo æ¨¡å—åç§°ï¼š%4
 	
 	call mvn archetype:generate -DarchetypeGroupId=%1 -DarchetypeArtifactId=%2 -DarchetypeVersion=%3 -DinteractiveMode=false -DarchetypeCatalog=local -DgroupId=%package% -Dversion=%version% -DartifactId=%appCode%
 	
-	::ÔİÍ£3Ãë£¬±ÜÃâÖØÃüÃû³öÏÖ¡°¾Ü¾ø·şÎñ¡±´íÎó£¬Ö±½Óping±¾»ú
+	::æš‚åœ3ç§’ï¼Œé¿å…é‡å‘½åå‡ºç°â€œæ‹’ç»æœåŠ¡â€é”™è¯¯ï¼Œç›´æ¥pingæœ¬æœº
 	ping -n 3 127.0.0.1>nul
 	
 	rename %appCode% %appCode%-%4
 	
 	ENDLOCAL
 
-	@echo Ö´ĞĞ%4³É¹¦...
+	@echo æ‰§è¡Œ%4æˆåŠŸ...
 	
 	goto:eof
 
-::Ò»²½²Ù×÷	
+::ä¸€æ­¥æ“ä½œ	
 :build
 
-  	@echo Ö´ĞĞgenerate¿ªÊ¼...
+  	@echo æ‰§è¡Œgenerateå¼€å§‹...
 	
-	::Ö÷pom¹¤³Ì
+	::ä¸»pomå·¥ç¨‹
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-pom%,%archetypeVersion%,pom
 	
-	::¹¤¾ßÀà¹¤³Ìjar£¬¹©¸÷¸ö¹¤³ÌÊ¹ÓÃ
+	::å·¥å…·ç±»å·¥ç¨‹jarï¼Œä¾›å„ä¸ªå·¥ç¨‹ä½¿ç”¨
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-util%,%archetypeVersion%,util
 	
-	::ÒµÎñÂß¼­¹¤³Ìjar£¬¹©sample-admin-web¡¢sample-service-webÊ¹ÓÃ
+	::ä¸šåŠ¡é€»è¾‘å·¥ç¨‹jarï¼Œä¾›sample-admin-webã€sample-service-webä½¿ç”¨
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-business%,%archetypeVersion%,business
 	
-	::ÖĞÌ¨½Ó¿Ú·şÎñjar£¬¹©sample-web¡¢sample-service-webÊ¹ÓÃ
+	::ä¸­å°æ¥å£æœåŠ¡jarï¼Œä¾›sample-webã€sample-service-webä½¿ç”¨
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-service%,%archetypeVersion%,service
 	
-	::ºóÌ¨web¹¤³Ìwar£¬Ìá¹©ºóÌ¨¹ÜÀí·şÎñ
+	::åå°webå·¥ç¨‹warï¼Œæä¾›åå°ç®¡ç†æœåŠ¡
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-admin-web%,%archetypeVersion%,admin-web
 	
-	::ÖĞÌ¨½Ó¿Ú·şÎñÊµÏÖwar£¬Ìá¹©Ô¶³Ì·şÎñ
+	::ä¸­å°æ¥å£æœåŠ¡å®ç°warï¼Œæä¾›è¿œç¨‹æœåŠ¡
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-service-web%,%archetypeVersion%,service-web
 	
-	::Ç°Ì¨web¹¤³Ìwar£¬Ìá¹©Ç°Ì¨Õ¹Ê¾·şÎñ
+	::å‰å°webå·¥ç¨‹warï¼Œæä¾›å‰å°å±•ç¤ºæœåŠ¡
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-web%,%archetypeVersion%,web
 	
-	@echo Ö´ĞĞgenerate³É¹¦...
+	@echo æ‰§è¡ŒgenerateæˆåŠŸ...
 
 	goto start
 
-::·Ö²½²Ù×÷
+::åˆ†æ­¥æ“ä½œ
 :step
 
-@echo *********generate²½ÖèÒıµ¼************
+@echo *********generateæ­¥éª¤å¼•å¯¼************
 
-@echo 1£©generate pom£¬ÇëÊäÈë£º1
+@echo 1ï¼‰generate pomï¼Œè¯·è¾“å…¥ï¼š1
 
-@echo 2£©generate utilÇëÊäÈë£º2
+@echo 2ï¼‰generate utilè¯·è¾“å…¥ï¼š2
 
-@echo 3£©generate business£¬ÇëÊäÈë£º3
+@echo 3ï¼‰generate businessï¼Œè¯·è¾“å…¥ï¼š3
 
-@echo 4£©generate service£¬ÇëÊäÈë£º4
+@echo 4ï¼‰generate serviceï¼Œè¯·è¾“å…¥ï¼š4
 
-@echo 5£©generate admin-web£¬ÇëÊäÈë£º5
+@echo 5ï¼‰generate admin-webï¼Œè¯·è¾“å…¥ï¼š5
 
-@echo 6£©generate service-web£¬ÇëÊäÈë£º6
+@echo 6ï¼‰generate service-webï¼Œè¯·è¾“å…¥ï¼š6
 
-@echo 7£©generate web£¬ÇëÊäÈë£º7
+@echo 7ï¼‰generate webï¼Œè¯·è¾“å…¥ï¼š7
 
-@echo 8£©·µ»ØÉèÖÃÒıµ¼£¬ÇëÊäÈë£º8
+@echo 8ï¼‰è¿”å›è®¾ç½®å¼•å¯¼ï¼Œè¯·è¾“å…¥ï¼š8
 
-@echo *********generate²½ÖèÒıµ¼*************
+@echo *********generateæ­¥éª¤å¼•å¯¼*************
 
-set /p selectStep=ÇëÊäÈëÄúµÄÑ¡Ôñ£º
+set /p selectStep=è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š
 if %selectStep%==1 (
-	::Ö÷pom¹¤³Ì
+	::ä¸»pomå·¥ç¨‹
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-pom%,%archetypeVersion%,pom
 	goto step
 )
 if %selectStep%==2 (
-	::¹¤¾ßÀà¹¤³Ìjar£¬¹©¸÷¸ö¹¤³ÌÊ¹ÓÃ
+	::å·¥å…·ç±»å·¥ç¨‹jarï¼Œä¾›å„ä¸ªå·¥ç¨‹ä½¿ç”¨
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-util%,%archetypeVersion%,util
 	goto step
 )
 if %selectStep%==3 (
-	::ÒµÎñÂß¼­¹¤³Ìjar£¬¹©sample-admin-web¡¢sample-service-webÊ¹ÓÃ
+	::ä¸šåŠ¡é€»è¾‘å·¥ç¨‹jarï¼Œä¾›sample-admin-webã€sample-service-webä½¿ç”¨
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-business%,%archetypeVersion%,business
 	goto step
 )
 if %selectStep%==4 (
-	::ÖĞÌ¨½Ó¿Ú·şÎñjar£¬¹©sample-web¡¢sample-service-webÊ¹ÓÃ
+	::ä¸­å°æ¥å£æœåŠ¡jarï¼Œä¾›sample-webã€sample-service-webä½¿ç”¨
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-service%,%archetypeVersion%,service
 	goto step
 )
 if %selectStep%==5 (
-	::ºóÌ¨web¹¤³Ìwar£¬Ìá¹©ºóÌ¨¹ÜÀí·şÎñ
+	::åå°webå·¥ç¨‹warï¼Œæä¾›åå°ç®¡ç†æœåŠ¡
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-admin-web%,%archetypeVersion%,admin-web
 	goto step
 )
 if %selectStep%==6 (
-	::ÖĞÌ¨½Ó¿Ú·şÎñÊµÏÖwar£¬Ìá¹©Ô¶³Ì·şÎñ
+	::ä¸­å°æ¥å£æœåŠ¡å®ç°warï¼Œæä¾›è¿œç¨‹æœåŠ¡
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-service-web%,%archetypeVersion%,service-web
 	goto step
 )
 if %selectStep%==7 (
-	::Ç°Ì¨web¹¤³Ìwar£¬Ìá¹©Ç°Ì¨Õ¹Ê¾·şÎñ
+	::å‰å°webå·¥ç¨‹warï¼Œæä¾›å‰å°å±•ç¤ºæœåŠ¡
 	call:generateModule %archetypeGroupId%,%archetypeArtifactId-web%,%archetypeVersion%,web
 	goto step
 )
@@ -236,7 +237,7 @@ if %selectStep%==8 (
 	goto start
 )
 else (
-	@echo ÄúµÄÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë£¡
+	@echo æ‚¨çš„è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼
 	goto step
 )		
 	
